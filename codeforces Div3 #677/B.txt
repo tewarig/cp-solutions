@@ -1,0 +1,51 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+int main()
+{
+ 
+	int n;
+	cin >> n;
+	while (n--)
+	{
+	int k ;
+	cin>>k;
+	int arr[k];
+    int last1=0;
+    int f = 0;
+	for(int i=0;i<k;i++)
+	{   
+	  cin>>arr[i];
+	  if(arr[i]==1)
+	  {
+	      last1 = i;
+	  }
+	}
+	for(int i=0;i<k;i++)
+	{
+	    if(arr[i]==1)
+	    {
+	        f = i;
+	        break;
+	    }
+	}
+	if(f == last1)
+	{
+	    cout<<0<<"\n";
+	}else{
+	    int count=0;
+	    for(int i=f;i<last1;i++)
+	    {
+	        if(arr[i]==0)
+	        {
+	            count++;
+	        }
+	    }
+	    cout<<count<<"\n";
+	}
+	
+	}
+	return 0;
+ 
+ 
+}
